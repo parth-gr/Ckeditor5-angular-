@@ -1,0 +1,13 @@
+
+
+<main>
+	
+	<div >
+		
+		<div class='row row-editor'>
+			<ckeditor [editor]="Editor" (ready)="onReady($event)" [config]="editorConfig" ></ckeditor>
+			<div #sidebar class='sidebar'></div>
+		</div>
+	</div>
+</main>
+

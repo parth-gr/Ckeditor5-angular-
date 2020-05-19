@@ -1,0 +1,11 @@
+
+   ChannelID is - {{ channelId }} 
+
+    
+        <button class="btn btn-success" (click)="gotoChannels()"> Back</button>
+    
+<br>
+    <!-- <button (click)="showEditor()"> Open editor</button> -->
+    <app-editor  [channelId]="channelId" (ready)="onEditorReady($event)"></app-editor>
+    <!-- <router-outlet> </router-outlet> -->
+

@@ -1,0 +1,12 @@
+<div class="row mt-5">
+    <div class="col-md-4 mb-3" *ngFor="let channel of channels">
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">{{channel.channelname}}</h5>
+          <p class="card-text">{{channel.channelid}}</p>
+          <a (click)="onSelect(channel)"class="btn btn-success">View</a>
+        </div>
+        </div>
+    </div>
+  </div>
+  

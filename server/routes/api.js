@@ -207,4 +207,24 @@ router.get('/home', (req ,res) => {
     
   })
 
+  router.post('/channels/details' , (req , res) => {
+    let userData = req.body 
+    let datadb = new Channel(userData)
+    var query = { channelid : datadb.channelid };
+    Channel.findOneAndUpdate({ channelid : datadb.channelid }, { channeldata : datadb.channeldata }, function(err , doc){
+      if (err) return res.send(500 , {error : err }) ;
+      return res.send("Successfully saved") ;
+     })
+    // datadb.save((error , registeredUser)=>{
+    //     if (error){
+    //         console.log(error)
+    //     } else{
+    //       let payload = {subject: registeredUser._id}
+    //       let token = jwt.sign(payload, 'secretKey')
+    //       res.status(200).send({token: token , channelid: datadb.channelid})
+        
+    //     }
+    })
+
+
 module.exports = router
